@@ -1,4 +1,4 @@
-Sportsbook Consensus Model
+API Consensus Model
 
 
 
@@ -44,23 +44,23 @@ Methodology
 
 * Margin Removal
 
-&nbsp;	Implied probability = 1 / book odds
+ 	Implied probability = 1 / book odds
 
-&nbsp;	Margin = sum of implied probabilities - 1
-
-
-
-&nbsp;	Margin is removed using this formula for proportional adjustment:
+ 	Margin = sum of implied probabilities - 1
 
 
 
-&nbsp;	True odds = (n \* book odds) / (n - book odds \* margin)
-
-&nbsp;	n = number of selections (2 selections in our market)
+ 	Margin is removed using this formula for proportional adjustment:
 
 
 
-&nbsp;	True probability = 1 / true odds
+ 	True odds = (n \* book odds) / (n - book odds \* margin)
+
+ 	n = number of selections (2 selections in our market)
+
+
+
+ 	True probability = 1 / true odds
 
 
 
@@ -68,9 +68,9 @@ Methodology
 
 * Weighted Consensus
 
-&nbsp;	Consensus probability = weighted average of true probabilities of a selection across books
+ 	Consensus probability = weighted average of true probabilities of a selection across books
 
-&nbsp;	Default weights = 1 for all books. Can be changed from bookmakers\_weights.py
+ 	Default weights = 1 for all books. Can be changed from bookmakers\_weights.py
 
 
 
@@ -78,13 +78,13 @@ Methodology
 
 * Edge Calculation
 
-&nbsp;	Expected Value (EV): EV = (Consensus probability \* odds) − 1
+ 	Expected Value (EV): EV = (Consensus probability \* odds) − 1
 
-&nbsp;	Positive EV indicates a potential value bet.
+ 	Positive EV indicates a potential value bet.
 
-&nbsp;	Log growth for long term wealth growth
+ 	Log growth for long term wealth growth
 
-&nbsp;	Z score for statistical significance
+ 	Z score for statistical significance
 
 
 
@@ -105,6 +105,3 @@ How To Run
 
 
 * Run main.py
-
-
-
